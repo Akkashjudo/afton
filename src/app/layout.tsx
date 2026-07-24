@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { EnquiryDrawer } from "@/components/enquiry/EnquiryDrawer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
-import { Loader } from "@/components/motion/Loader";
 import { MotionRoot } from "@/components/motion/MotionRoot";
 import { PageTransition } from "@/components/motion/PageTransition";
 import { organizationSchema, SITE_URL } from "@/lib/seo/schema";
@@ -74,7 +73,6 @@ export default function RootLayout({
         />
         <MotionRoot>
           <EnquiryProvider>
-            <Loader />
             <Header />
             <main className="flex-1">
               <PageTransition>{children}</PageTransition>

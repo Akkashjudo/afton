@@ -29,7 +29,7 @@ export default function BrandsPage() {
             <Link
               key={brand.slug}
               href={`/brand/${brand.slug}`}
-              className="group flex flex-col border border-outline-variant transition-colors hover:border-primary"
+              className="group flex flex-col border border-outline-variant transition-[transform,border-color] duration-300 ease-out will-change-transform hover:-translate-y-1.5 hover:border-primary motion-reduce:transform-none"
             >
               <div className="flex aspect-[4/3] items-center justify-center bg-technical p-8">
                 {image && (

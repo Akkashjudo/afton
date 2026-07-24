@@ -15,7 +15,7 @@ export function ProductCard({
   const isCommercial = product.categorySlug === "commercial-gym-equipment";
 
   return (
-    <div className="group flex flex-col border border-transparent bg-surface transition-all duration-300 hover:border-outline-variant">
+    <div className="group flex flex-col border border-transparent bg-surface transition-[transform,border-color] duration-300 ease-out will-change-transform hover:-translate-y-1.5 hover:border-primary motion-reduce:transform-none">
       <div className="relative flex aspect-square items-center justify-center overflow-hidden bg-technical p-8">
         <Link href={`/product/${product.slug}`} className="flex h-full w-full items-center justify-center">
           {image ? (

@@ -52,7 +52,7 @@ export function RelatedProducts({
             <div key={product.slug} className="group flex min-w-[280px] snap-start flex-col gap-4 sm:min-w-[320px]">
               <Link
                 href={`/product/${product.slug}`}
-                className="flex aspect-square items-center justify-center border border-outline-variant bg-surface-low p-6 transition-colors group-hover:border-primary"
+                className="flex aspect-square items-center justify-center border border-outline-variant bg-surface-low p-6 transition-[transform,border-color] duration-300 ease-out will-change-transform group-hover:-translate-y-1.5 group-hover:border-primary motion-reduce:transform-none"
               >
                 {product.primaryImage && (
                   <Image
@@ -74,9 +74,10 @@ export function RelatedProducts({
                 <h3 className="t-headline-md uppercase text-primary">{product.product_name}</h3>
                 <Link
                   href={`/product/${product.slug}`}
-                  className="mt-2 inline-flex items-center gap-2 border-b border-primary font-mono text-xs font-semibold uppercase tracking-[0.1em] text-primary"
+                  className="mt-2 inline-flex items-center gap-2 border-b border-primary font-mono text-xs font-semibold uppercase tracking-[0.1em] text-primary transition-colors hover:text-accent hover:border-accent"
                 >
-                  View Details <ArrowUpRight className="h-4 w-4" aria-hidden />
+                  View Details
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
                 </Link>
               </div>
             </div>

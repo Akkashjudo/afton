@@ -210,68 +210,7 @@
   }
 }
 
-/* First-visit intro loader — CSS-driven so it never depends on rAF. */
-.afton-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  background: var(--primary);
-  color: #fff;
-  opacity: 1;
-  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.afton-loader--hiding {
-  opacity: 0;
-}
-.afton-loader__mark {
-  font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  animation: afton-loader-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-.afton-loader__dot {
-  color: var(--accent);
-}
-.afton-loader__track {
-  height: 2px;
-  width: 8rem;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.12);
-}
-.afton-loader__bar {
-  height: 100%;
-  width: 100%;
-  background: var(--accent);
-  transform: translateX(-100%);
-  animation: afton-loader-bar 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-@keyframes afton-loader-reveal {
-  from {
-    opacity: 0;
-    filter: blur(8px);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-@keyframes afton-loader-bar {
-  to {
-    transform: translateX(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .afton-loader {
-    display: none;
-  }
   *,
   *::before,
   *::after {
